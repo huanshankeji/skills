@@ -6,7 +6,7 @@ AI agent skills by [@huanshankeji](https://github.com/huanshankeji) mainly for o
 
 | Skill | Description |
 |---|---|
-| [git-commit-after-review](skills/git-commit-after-review/) | Creates a Git commit for follow-up work after reviewing a commit, commit range, or PR; includes the full reviewed hash except when it was current `HEAD` |
+| [git-commit-after-review](skills/git-commit-after-review/) | Creates a Git commit for follow-up work after reviewing a commit, commit range, or PR; includes the full reviewed hash except when it was the parent commit |
 
 ## Installation
 
