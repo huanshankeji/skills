@@ -2,7 +2,8 @@
 name: git-commit-after-review
 description: >
   Creates a Git commit for follow-up work after a full review of a commit,
-  commit range, or pull request. Use when the user wants those subsequent
+  commit range, pull request, or remaining unreviewed PR changes in the
+  GitHub Files Changed tab/view. Use when the user wants those subsequent
   edits committed (or committed and pushed). If a full review is only
   suspected, or what was reviewed is not obvious, ask first.
 license: Apache-2.0
@@ -16,14 +17,17 @@ metadata:
 ## When to apply
 
 - The user wants the post-review edits **committed** and **explicitly** says
-  they have fully reviewed a commit or PR → apply this skill.
+  they have fully reviewed a commit, a PR, or remaining unreviewed PR
+  changes → apply this skill.
 - A full review is only **suspected** → ask whether this commit should be
   recorded as a review follow-up. Do not assume.
 
 ## Identify what was reviewed
 
-Do not assume which commit, range, or PR was reviewed. An open PR, the
-current branch, or `HEAD` is not enough. In most cases it is not
+Do not assume which commit, range, PR, or remaining unreviewed Files
+Changed was reviewed. An open PR, the current branch, or `HEAD` is not
+enough. Naming a PR is not enough to know whether they reviewed the
+whole PR or remaining unreviewed Files Changed. In most cases it is not
 obvious — ask. Skip asking only when the user already named the target.
 
 Once known:
@@ -34,9 +38,15 @@ Once known:
 - **Otherwise**: a full 40-character hash, or a range with full hashes at
   both ends (`A..B`; use `base...head` for a GitHub-style accumulated PR
   diff). Resolve with `git rev-parse --verify <rev>`. Expand short hashes.
-- **A PR**: add the PR number when known, plus the reviewed tip's full hash.
-  If the number is unknown, record the reviewed range (full hashes), not
-  only a single tip.
+- **A whole PR**: add the PR number when known, plus the reviewed tip's
+  full hash. If the number is unknown, record the reviewed range (full
+  hashes), not only a single tip.
+- **Remaining unreviewed PR changes** in the GitHub Files Changed
+  tab/view (for example `/pull/<n>/changes`): not the whole PR. Record
+  the PR number when known, that this was remaining unreviewed Files
+  Changed, and the reviewed tip's full hash. If the number is unknown,
+  record the reviewed range (full hashes). Do not invent which files
+  remained.
 
 Do not invent a hash or range.
 
@@ -44,8 +54,8 @@ Do not invent a hash or range.
 
 Match the repo's usual subject/body style. In the body, make clear this is a
 follow-up from that review, and include the identifier from above (the parent
-commit, full hash, range, and/or PR). Then say what changed and why. No
-fixed sentence template.
+commit, full hash, range, whole PR, and/or remaining unreviewed Files
+Changed). Then say what changed and why. No fixed sentence template.
 
 ## Create the commit
 
