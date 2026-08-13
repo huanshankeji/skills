@@ -22,6 +22,11 @@ metadata:
 - A full review is only **suspected** → ask whether this commit should be
   recorded as a review follow-up. Do not assume.
 
+If this skill is applied **implicitly** (the user did not name it, type
+`/git-commit-after-review`, or `@` it), tell them in the reply that
+`git-commit-after-review` is being used. Do this on the first reply that
+follows the skill, including when asking what was reviewed.
+
 ## Identify what was reviewed
 
 Do not assume which commit, range, PR, or remaining unreviewed Files
