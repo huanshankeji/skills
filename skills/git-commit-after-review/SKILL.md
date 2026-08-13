@@ -52,9 +52,4 @@ fixed sentence template.
 
 ## Create the commit
 
-Stage the post-review edits by path. Do not stage unrelated working-tree
-changes, and do not reach for `git commit -a`.
-
-Never `--amend` or force-push here: this skill exists to tie the follow-up to
-the reviewed snapshot, and rewriting either commit breaks that link. Add a new
-commit instead. Push only if asked.
+Commit with the repo's usual Git protocol. Push only if asked.
