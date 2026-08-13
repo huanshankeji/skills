@@ -26,20 +26,11 @@ metadata:
   review: call it "the parent commit". Do not require its hash. Do not call
   it `HEAD`, which means this new commit once it exists.
 - **Otherwise**: a full 40-character hash, or a range with full hashes at
-  both ends. Resolve each rev on its own with
-  `git rev-parse --verify <rev>^{commit}` — a range is not a single rev, and
-  `^{commit}` turns an annotated tag into the commit it points at. Expand
-  short hashes.
+  both ends (`A..B`; use `base...head` for a GitHub-style accumulated PR
+  diff). Resolve with `git rev-parse --verify <rev>`. Expand short hashes.
 - **A PR**: add the PR number when known, plus the reviewed tip's full hash.
   If the number is unknown, record the reviewed range (full hashes), not
   only a single tip.
-
-A GitHub-style accumulated PR diff is `git diff <base>...<head>`, which
-compares the merge base against `<head>`. Record it as a diff, e.g. "the diff
-of `<full-base>...<full-head>`", or record
-`git merge-base <base> <head>`'s output as `<full-merge-base>..<full-head>`.
-A bare `A...B` is read as a symmetric difference by `git log`, which also
-lists commits added to `<base>` after branching and never reviewed.
 
 If several candidates exist, ask. Do not invent a hash or range.
 
