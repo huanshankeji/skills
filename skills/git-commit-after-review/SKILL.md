@@ -1,31 +1,45 @@
 ---
 name: git-commit-after-review
 description: >
-  Creates a Git commit for follow-up work after a full review of a commit,
-  commit range, pull request, or remaining unreviewed PR changes in the
-  GitHub Files Changed tab/view. Use when the user wants those subsequent
-  edits committed (or committed and pushed). If a full review is only
-  suspected, or what was reviewed is not obvious, ask first.
+  Creates a Git commit for follow-up work after a full review of a named
+  commit, commit range, pull request, or remaining unreviewed PR changes in
+  the GitHub Files Changed tab/view. Use when the user wants those subsequent
+  edits committed (or committed and pushed) and has named that review target
+  (or invoked this skill). Do not use when they only reviewed uncommitted
+  working-tree changes ("all reviewed", "I reviewed these edits"). If a full
+  review of a commit/PR/Files Changed is only suspected, or the target is not
+  obvious, ask first.
 license: Apache-2.0
 metadata:
   author: huanshankeji
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Commit after reviewing a commit or PR
 
 ## When to apply
 
-- The user wants the post-review edits **committed** and **explicitly** says
-  they have fully reviewed a commit, a PR, or remaining unreviewed PR
-  changes → apply this skill.
-- A full review is only **suspected** → ask whether this commit should be
-  recorded as a review follow-up. Do not assume.
+- The user wants the post-review edits **committed** and has **named** a
+  review target: a commit, a commit range, a whole PR, or remaining
+  unreviewed PR Files Changed (or they invoked this skill by name,
+  `/git-commit-after-review`, or `@`) → apply this skill.
+- A full review of such a target is only **suspected** → ask whether this
+  commit should be recorded as a review follow-up. Do not assume.
+
+### Do not apply
+
+- The user reviewed **uncommitted / working-tree** changes and wants those
+  committed. Phrases like "all reviewed", "I reviewed these changes", or
+  "looks good, commit" without naming a commit, PR, or Files Changed tab
+  mean a **normal commit**, not this skill.
+- Do not treat an open PR, the current branch, or `git log` on this branch
+  as proof that this skill applies.
 
 If this skill is applied **implicitly** (the user did not name it, type
 `/git-commit-after-review`, or `@` it), tell them in the reply that
 `git-commit-after-review` is being used. Do this on the first reply that
-follows the skill, including when asking what was reviewed.
+follows the skill, including when asking what was reviewed. If they only
+reviewed uncommitted changes, do not apply the skill in the first place.
 
 ## Identify what was reviewed
 
