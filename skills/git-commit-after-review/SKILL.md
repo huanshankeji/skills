@@ -71,10 +71,10 @@ Do not invent a hash or range.
 
 ## Commit message
 
-Match the repo's usual subject/body style. In the body, make clear this is a
-follow-up from that review, and include the identifier from above (the parent
-commit, full hash, range, whole PR, and/or remaining unreviewed Files
-Changed). Then say what changed and why. No fixed sentence template.
+In the body, make clear this is a follow-up from that review, and include
+the identifier from above (the parent commit, full hash, range, whole PR,
+and/or remaining unreviewed Files Changed). Then say what changed and why.
+No fixed sentence template.
 
 ## Create the commit
 
