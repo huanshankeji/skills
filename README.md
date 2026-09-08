@@ -10,6 +10,14 @@ AI agent skills by [@huanshankeji](https://github.com/huanshankeji) mainly for o
 
 ## Installation
 
+### Cursor
+
+In Cursor, open **Customize** → **Add Marketplace** (or the Plugins tab) and import:
+
+```text
+https://github.com/huanshankeji/skills
+```
+
 ### Using the skills CLI
 
 ```bash
