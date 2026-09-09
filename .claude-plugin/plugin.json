@@ -1,0 +1,14 @@
+{
+  "name": "huanshankeji-skills",
+  "version": "1.0.0",
+  "description": "AI agent skills by @huanshankeji, mainly for our own development conventions.",
+  "author": {
+    "name": "Chengdu Huanshan Technology",
+    "email": "chengduhuanshankeji@hotmail.com",
+    "url": "https://github.com/huanshankeji"
+  },
+  "homepage": "https://github.com/huanshankeji/skills",
+  "repository": "https://github.com/huanshankeji/skills",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "git", "huanshankeji"]
+}

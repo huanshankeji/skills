@@ -18,6 +18,23 @@ In Cursor, open **Customize** → **Add Marketplace** (or the Plugins tab) and i
 https://github.com/huanshankeji/skills
 ```
 
+### Claude Code
+
+```
+/plugin marketplace add huanshankeji/skills
+```
+
+```
+/plugin install huanshankeji-skills@huanshankeji-skills
+```
+
+### Codex
+
+```bash
+codex plugin marketplace add huanshankeji/skills
+codex plugin add huanshankeji-skills@huanshankeji-skills
+```
+
 ### Using the skills CLI
 
 ```bash
