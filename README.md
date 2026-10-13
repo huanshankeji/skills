@@ -35,6 +35,21 @@ codex plugin marketplace add huanshankeji/skills
 codex plugin add huanshankeji-skills@huanshankeji-skills
 ```
 
+### Codex Cloud
+
+Adding this repository via **Add plugin marketplace** does not make its
+plugin available in Codex Cloud. The ZIP script provides an uploadable package
+for installing it as a personal plugin instead.
+
+Create the uploadable plugin ZIP with:
+
+```sh
+./zip_codex_plugin.sh
+```
+
+This writes `huanshankeji-skills.zip` in the current working directory,
+including the plugin manifests, license, and all skills.
+
 ### Using the skills CLI
 
 ```bash
