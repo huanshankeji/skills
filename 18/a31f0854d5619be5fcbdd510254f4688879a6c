@@ -1,0 +1,27 @@
+.claude-plugin/plugin.json
+  s_2c48f15d29bfcf::t_3632b02f967b7a 3
+.codex-plugin/plugin.json
+  s_2c48f15d29bfcf::t_3632b02f967b7a 3
+plugin.json
+  s_2c48f15d29bfcf::t_3632b02f967b7a 4
+.cursor-plugin/marketplace.json
+  s_2c48f15d29bfcf::t_3632b02f967b7a 9
+.cursor-plugin/plugin.json
+  s_2c48f15d29bfcf::t_3632b02f967b7a 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "18a31f0854d5619be5fcbdd510254f4688879a6c",
+  "prompts": {},
+  "sessions": {
+    "s_2c48f15d29bfcf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1635f-33cb-7da0-986d-18ee7bb24bca",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Yongshun Ye <shreckye@gmail.com>"
+    }
+  }
+}
