@@ -1,0 +1,22 @@
+README.md
+  s_2c48f15d29bfcf::t_d31520877298ae 9
+skills/git-commit-after-review/SKILL.md
+  s_2c48f15d29bfcf::t_d31520877298ae 4-9,20-28,32,42-45
+  s_2c48f15d29bfcf::t_703379654eb650 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "67d5798d2d5cc5fb3ef2197949dcf7f8fbc3f235",
+  "prompts": {},
+  "sessions": {
+    "s_2c48f15d29bfcf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1635f-33cb-7da0-986d-18ee7bb24bca",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Yongshun Ye <shreckye@gmail.com>"
+    }
+  }
+}
