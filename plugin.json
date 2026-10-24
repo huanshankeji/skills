@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "huanshankeji-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AI agent skills by @huanshankeji, mainly for our own development conventions.",
   "author": {
     "name": "Chengdu Huanshan Technology",
