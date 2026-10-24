@@ -6,7 +6,7 @@ AI agent skills by [@huanshankeji](https://github.com/huanshankeji) mainly for o
 
 | Skill | Description |
 |---|---|
-| [git-commit-after-review](skills/git-commit-after-review/) | Creates a Git commit for follow-up work after reviewing a **named** commit, commit range, whole PR, or remaining unreviewed PR Files Changed; do **not** use when the user only reviewed uncommitted changes ("all reviewed"); ask what was reviewed unless they already named the target; includes the full reviewed hash except when it was the parent commit |
+| [git-commit-after-review](skills/git-commit-after-review/) | Creates a Git commit for follow-up work after a **human** fully reviews a named commit, commit range, whole PR, or remaining unreviewed PR Files Changed. Agents may suggest it, but apply it only when the user explicitly requests or accepts its use. Excludes AI-only reviews and reviews of uncommitted changes. |
 
 ## Installation
 
